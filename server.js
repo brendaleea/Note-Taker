@@ -1,7 +1,7 @@
 
 const express = require("express")
 const path = require("path")
-const db =require ("../db/db.json")
+const db =require ("./db/db.json")
 const app = express()
 const PORT= 3000
 const fs=require("fs")
@@ -24,4 +24,4 @@ console.log(db)
 fs.writeFileSync("./db/db.json",JSON.stringify(db))
 res.json(db)
 })
-app.listen(PORT,()=>{console.log("app is listening")})
+app.listen(PORT,()=>{console.log(`app is listening http://localhost:${PORT}`)})
